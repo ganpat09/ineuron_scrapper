@@ -1,6 +1,6 @@
 # ineuron_scrapper
 Scrapping all course details from ineuron website 
-Website link : https://ineuron.ai/
+# Website link : https://ineuron.ai/
 
 # Sample 
 ![image](https://user-images.githubusercontent.com/19682438/163603997-51dfccf5-9ba8-44f3-99e0-c657ccb85eb0.png)

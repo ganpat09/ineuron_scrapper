@@ -13,9 +13,12 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])  # route to display the home page
 @cross_origin()
 def homePage():
+    db_operation = DbOperation(db_name="ineuron_data")
+    db_operation.connect_current_collection("ineuron_collection")
 
     li = []
     for i in db_operation.get_all_data():
+
         li.append(i)
 
     return dumps(li)
@@ -37,6 +40,6 @@ class MyApp(Setting):
 # MyApp.register(app, route_base='/')
 
 if __name__ == "__main__":
-    a = MyApp()
-    db_operation = a.db_operation
+    #a = MyApp()
+    #db_operation = a.db_operation
     app.run(host='127.0.0.1', port=8000, debug=True)

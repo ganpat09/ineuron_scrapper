@@ -1,6 +1,8 @@
 # ineuron_scrapper
-Scrapping all course details from ineuron website \n
+Scrapping all course details from ineuron website 
+
 Scrapping only support from windows os with chrome Version 100.0.4896.88 (Official Build) (64-bit) 
+
 # Website link : https://ineuron.ai/
 
 # Sample 

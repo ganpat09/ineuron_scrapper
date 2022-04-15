@@ -31,13 +31,13 @@ class MyApp(Setting):
         self.db_operation = DbOperation(db_name="ineuron_data")
         self.db_operation.create_collection("ineuron_collection")
         self.db_operation.connect_current_collection("ineuron_collection")
-        #Scrapping(self.db_operation)
+        # only windows support with chrome install
+        # Scrapping(self.db_operation)
 
 
 
 
 
-# MyApp.register(app, route_base='/')
 
 if __name__ == "__main__":
     #a = MyApp()

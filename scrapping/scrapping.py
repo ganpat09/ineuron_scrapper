@@ -1,16 +1,9 @@
-from selenium.webdriver.common.by import By
-
 from setting.setting import Setting
-import requests
 from bs4 import BeautifulSoup as bs
-from urllib.request import urlopen as uReq
 from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 import time
 import logging
-import re
 from db_connection.mongodboperation import DbOperation
 
 
@@ -189,6 +182,7 @@ class Scrapping(Setting):
         return final_details, finalized_links
 
     def open_ineuron(self, driver):
+        """start scrapping """
         try:
 
             driver.get(self.base_url)
@@ -197,7 +191,7 @@ class Scrapping(Setting):
             courses_links = self.collect_course_detail_links(driver)
             course_main_url = driver.current_url
             courses_links = list(set(courses_links))
-            #print(len(courses_links), courses_links[-1])
+            # print(len(courses_links), courses_links[-1])
             finalized = []
             temps = []
             try:
@@ -240,6 +234,7 @@ class Scrapping(Setting):
         return list(set(li1) - set(li2)) + list(set(li2) - set(li1))
 
     def connect_chrome(self):
+        """connect to chrome driver with options """
         chrome_options = Options()
         chrome_options.headless = False
         chrome_options.add_argument('disable-infobars')

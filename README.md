@@ -8,6 +8,9 @@ Scrapping only support on windows os with chrome Version 100.0.4896.88 (Official
 # Sample 
 ![image](https://user-images.githubusercontent.com/19682438/163603997-51dfccf5-9ba8-44f3-99e0-c657ccb85eb0.png)
 
+![image](https://user-images.githubusercontent.com/19682438/163604723-15c0007e-b270-4252-9290-2b72c2e66ceb.png)
+
+
 
 {
     "_id": {
